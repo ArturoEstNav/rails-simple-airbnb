@@ -1,0 +1,40 @@
+<%= render "navbar" %>
+<main>
+  <div class="container p-3">
+    <h1>All our flats</h1>
+    <p>All <%= @flats.length%>
+      <% if @flats.length == 1 %>
+      flat.
+      <% else %>
+      flats.
+      <% end %>
+    </p>
+    <div class="container-cards">
+      <% @flats.each do |flat| %>
+        <div class="card shadow-sm" style="width: 350px;">
+          <img src="http://via.placeholder.com/350x180" class="card-img-top" alt="flat image">
+          <div class="card-body bg-light p-0">
+            <div class="p-3">
+              <h5 class="card-title"><%= flat.name %></h5>
+              <p class="card-text"><%= flat.address %></p>
+              <p class="card-text">
+                <i class="fas fa-user-friends"></i>&nbsp;<%= flat.number_of_guests %>&nbsp; &nbsp;
+                <i class="fas fa-euro-sign"></i>&nbsp;<%= flat.price_per_night %>
+              </p>
+            </div>
+            <div class="card-footer bg-white border-top">
+              <span class="card-text text-primary"><%= link_to 'More info', flat_path(flat.id) %></span>
+              <span class="card-text text-warning">Edit</span>
+              <span class="card-text text-danger">Remove</span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>
+
+
+<!-- <i class="fas fa-euro-sign"></i> -->
+<!-- <i class="fas fa-user-friends"></i> -->
+<!-- <%=%> -->

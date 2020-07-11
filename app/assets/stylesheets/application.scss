@@ -11,3 +11,34 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #fff;
+}
+
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+a, .link-index {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.3em;
+}
+
+.container-details {
+  position: relative;
+  bottom: 80px;
+}

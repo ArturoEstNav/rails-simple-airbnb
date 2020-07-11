@@ -9,7 +9,7 @@ puts 'Creating new instances'
     address: Faker::Address.street_address,
     description: Faker::Movies::HarryPotter.quote,
     price_per_night: (50..500).to_a.sample,
-    number_of_guests: (1..7).to_a.sample
+    number_of_guests: (2..7).to_a.sample
   )
   new_flat.save
   puts "Flat number #{new_flat.id} created"

@@ -1,0 +1,35 @@
+<%= render "navbar" %>
+<img src="http://via.placeholder.com/1287x350" alt="flat view">
+<div class="container p-3 d-flex justify-content-around container-details" style="width: 1110px;">
+  <div class="m-3 d-flex flex-column" style="width: 730px;">
+    <div class="bg-light rounded border p-3 m-2">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="bg-light rounded border p-3 m-2" style="height: 400px;">
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
+  <div class="m-3 d-flex flex-column" style="width: 350px;">
+    <div class="bg-light rounded border p-3 m-2">
+      <h4>Book this place!</h4>
+
+    </div>
+    <div class="bg-light rounded border p-3 m-2">
+      <h4>Details</h4>
+      <p>
+        <i class="fas fa-user-friends"></i>&nbsp;<%= @flat.number_of_guests %>&nbsp; &nbsp;
+        <i class="fas fa-euro-sign"></i>&nbsp;<%= @flat.price_per_night %>
+      </p>
+    </div>
+    <div class="bg-light rounded border p-3 m-2 d-flex justify-content-between align-items-center">
+      <span>Share</span>
+      <ul class="list-group list-group-horizontal">
+        <li><i class="fab fa-facebook-square"></i></li>
+        <li><i class="fab fa-twitter-square"></i></li>
+        <li><i class="fab fa-pinterest-square"></i></li>
+        <li><i class="fas fa-envelope-square"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>
