@@ -24,8 +24,8 @@
             </div>
             <div class="card-footer bg-white border-top">
               <span class="card-text text-primary"><%= link_to 'More info', flat_path(flat.id) %></span>
-              <span class="card-text text-warning">Edit</span>
-              <span class="card-text text-danger">Remove</span>
+              <span class="card-text text-warning"><%= link_to 'Edit', edit_flat_path(flat.id) %></span>
+              <span class="card-text text-danger"><%= link_to 'Remove', flat_path(flat.id), method: :delete, data: { confirm: 'Are you sure?'} %></span>
             </div>
           </div>
         </div>
